@@ -23,8 +23,7 @@ namespace BookStore.DataAccess.Repository
 
             if(obj != null)
             {
-                category.Name = obj.Name;
-                _db.SaveChanges();
+                obj.Name = category.Name;
             }
         }
     }

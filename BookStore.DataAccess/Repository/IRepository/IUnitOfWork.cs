@@ -10,5 +10,6 @@ namespace BookStore.DataAccess.Repository.IRepository
     {
         ICategoryRepository CategoryRepository { get; }
         ISP_Call SP_Call { get; }
+        void Save();
     }
 }
