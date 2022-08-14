@@ -2,6 +2,7 @@
 using BookStore.DataAccess.Repository.IRepository;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace BookStore.DataAccess.Repository
         public SP_Call(ApplicationDbContext db)
         {
             _db = db;
+            ConnectionString = db.Database.GetDbConnection().ConnectionString;
         }
 
         public void Dispose()
