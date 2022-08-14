@@ -1,7 +1,7 @@
 ﻿var dataTable;
 
 $(document).ready(function () {
-    loadDataTable("Admin", "Category");
+    loadDataTable("Admin", "CoverType");
 });
 
 function loadDataTable(area, controller) {
