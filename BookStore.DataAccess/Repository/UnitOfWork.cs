@@ -14,6 +14,8 @@ namespace BookStore.DataAccess.Repository
         public ICategoryRepository CategoryRepository { get; private set; }
         public ICoverTypeRepository CoverTypeRepository { get; private set; }
         public IProductRepository ProductRepository { get; private set; }
+        public ICompanyRepository CompanyRepository { get; private set; }
+        public IApplicationUserRepository ApplicationUserRepository { get; private set; }
         public ISP_Call SP_Call { get; private set; }
 
         public UnitOfWork(ApplicationDbContext db)
@@ -22,6 +24,8 @@ namespace BookStore.DataAccess.Repository
             CategoryRepository = new CategoryRepository(_db);
             CoverTypeRepository = new CoverTypeRepository(_db);
             ProductRepository = new ProductRepository(_db);
+            CompanyRepository = new CompanyRepository(_db);
+            ApplicationUserRepository = new ApplicationUserRepository(_db);
             SP_Call = new SP_Call(_db);
         }
 
