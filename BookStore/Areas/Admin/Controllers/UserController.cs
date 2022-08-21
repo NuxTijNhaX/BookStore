@@ -1,6 +1,8 @@
 ﻿using BookStore.DataAccess.Data;
 using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models;
+using BookStore.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,6 +11,7 @@ using System.Linq;
 namespace BookStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
     public class UserController : Controller
     {
         private readonly ApplicationDbContext _db;
