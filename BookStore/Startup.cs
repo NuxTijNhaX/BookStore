@@ -52,14 +52,14 @@ namespace BookStore
 
             services.AddAuthentication().AddFacebook(options =>
             {
-                options.AppId = "373556144943264";
-                options.AppSecret = "65412d49b8adfced26d82a38bc72471a";
+                options.AppId = "";
+                options.AppSecret = "";
             });
 
             services.AddAuthentication().AddGoogle(options =>
             {
-                options.ClientId = "321133874527-8oviuf2shps9448hrkfqk4r80qp8mh95.apps.googleusercontent.com";
-                options.ClientSecret = "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";
+                options.ClientId = "";
+                options.ClientSecret = "";
             });
         }
 
