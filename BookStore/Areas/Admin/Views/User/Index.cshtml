@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "User Management - Index";
+}
+
+<br />
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-primary">User List</h2>
+    </div>
+    <div class="col-6 text-end">
+        <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp; Create New User</a>
+    </div>
+</div>
+
+<br />
+<div class="border rounded">
+    <table id="tableData" class="table table-striped">
+        <thead>
+            <tr class="table-info">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Action</th> 
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/user.js"></script>
+}
